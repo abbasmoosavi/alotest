@@ -79,7 +79,7 @@ const Router = () => {
 
   return (
     <>
-      <StatusBar backgroundColor="transparent" barStyle="dark-content" />
+      <StatusBar backgroundColor="#34495E" barStyle="light-content" />
       <NavigationContainer
         linking={{
           prefixes: ['https://alopeyk.com'],

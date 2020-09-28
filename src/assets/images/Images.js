@@ -1,4 +1,6 @@
 /* eslint-disable import/no-unresolved */
 export default {
   ic_about_us: require('./ic_about_us.png'),
+  ic_product: require('./ic_product.png'),
+  ic_order: require('./ic_order.png'),
 };

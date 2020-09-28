@@ -12,7 +12,7 @@ const screenOptionStyle = (navigation) => {
   return {
     animationEnabled: true,
     headerStyle: {
-      backgroundColor: '#23B3BE',
+      backgroundColor: '#34495E',
     },
     headerTitleAlign: 'center',
     headerTitle: (props) => (

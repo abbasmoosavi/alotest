@@ -1,16 +1,26 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Image, Text, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import {
+  heightPercentageToDP as hp,
+  widthPercentageToDP as wp,
+} from 'react-native-responsive-screen';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Strings } from '../services/language';
 import { FontFamily, Integer } from '../styles';
 import { OrdersStackNavigator, ProductsStackNavigator } from './StackNavigator';
+import Images from '../assets/images/Images';
 
 const Tab = createBottomTabNavigator();
 const BottomTabNavigator = () => {
   return (
-    <Tab.Navigator backBehavior="initialRoute" animationEnabled initialRouteName="Products">
+    <Tab.Navigator
+      tabBarOptions={{
+        activeTintColor: '#00D9CF',
+      }}
+      backBehavior="initialRoute"
+      animationEnabled
+      initialRouteName="Products">
       <Tab.Screen
         name="Products"
         options={{
@@ -28,13 +38,10 @@ const BottomTabNavigator = () => {
             </View>
           ),
           tabBarIcon: ({ color, size }) => (
-            <Icon
-              fontSize={size}
-              type="MaterialIcons"
-              name="person"
-              style={{
-                color,
-              }}
+            <Image
+              resizeMode="contain"
+              style={{ tintColor: color, height: wp('6%'), width: wp('6%') }}
+              source={Images.ic_product}
             />
           ),
         }}
@@ -57,13 +64,10 @@ const BottomTabNavigator = () => {
             </View>
           ),
           tabBarIcon: ({ color, size }) => (
-            <Icon
-              fontSize={size}
-              type="MaterialIcons"
-              name="person"
-              style={{
-                color,
-              }}
+            <Image
+              resizeMode="contain"
+              style={{ tintColor: color, height: wp('6%'), width: wp('6%') }}
+              source={Images.ic_order}
             />
           ),
         }}
