@@ -1,11 +1,12 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Col } from 'react-native-easy-grid';
+import { useSelector } from 'react-redux';
 
 const OrdersTab = () => {
+  const color = useSelector((state) => state.color);
+
   return (
-    <View>
-      <Text>OrdersTab</Text>
-    </View>
+    <Col style={{ width: '100%', height: '100%', backgroundColor: color.BACKGROUND_MAIN }}></Col>
   );
 };
 

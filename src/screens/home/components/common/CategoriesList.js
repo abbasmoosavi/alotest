@@ -87,8 +87,6 @@ const CategoriesList = () => {
       style={{
         height: hp('8%'),
         width: '100%',
-        position: 'absolute',
-        top: 0,
       }}
       contentContainerStyle={{ alignItems: 'center' }}
       horizontal

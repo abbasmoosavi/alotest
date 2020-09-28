@@ -6,6 +6,7 @@ import {
   widthPercentageToDP as wp,
 } from 'react-native-responsive-screen';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { useSelector } from 'react-redux';
 import { Strings } from '../services/language';
 import { FontFamily, Integer } from '../styles';
 import { OrdersStackNavigator, ProductsStackNavigator } from './StackNavigator';
@@ -13,10 +14,15 @@ import Images from '../assets/images/Images';
 
 const Tab = createBottomTabNavigator();
 const BottomTabNavigator = () => {
+  const colorStore = useSelector((state) => state.color);
+
   return (
     <Tab.Navigator
       tabBarOptions={{
-        activeTintColor: '#00D9CF',
+        style: {
+          backgroundColor: colorStore.BACKGRAND_TOOLBAR,
+        },
+        activeTintColor: colorStore.AMARANTH,
       }}
       backBehavior="initialRoute"
       animationEnabled
@@ -37,7 +43,7 @@ const BottomTabNavigator = () => {
               ) : null}
             </View>
           ),
-          tabBarIcon: ({ color, size }) => (
+          tabBarIcon: ({ color }) => (
             <Image
               resizeMode="contain"
               style={{ tintColor: color, height: wp('6%'), width: wp('6%') }}
@@ -63,7 +69,7 @@ const BottomTabNavigator = () => {
               ) : null}
             </View>
           ),
-          tabBarIcon: ({ color, size }) => (
+          tabBarIcon: ({ color }) => (
             <Image
               resizeMode="contain"
               style={{ tintColor: color, height: wp('6%'), width: wp('6%') }}

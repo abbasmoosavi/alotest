@@ -1,12 +1,17 @@
 import React from 'react';
-import { View, Text } from 'react-native';
 import { Col } from 'react-native-easy-grid';
-import { CategoriesList } from '../components/common';
+import { useSelector } from 'react-redux';
+import { CategoriesList, ProductList } from '../components/common';
+
+const Products = require('../../../mock_data/Products.json');
 
 const ProductsTab = () => {
+  const color = useSelector((state) => state.color);
+
   return (
-    <Col>
+    <Col style={{ width: '100%', height: '100%', backgroundColor: color.BACKGROUND_MAIN }}>
       <CategoriesList />
+      <ProductList data={Products} />
     </Col>
   );
 };
