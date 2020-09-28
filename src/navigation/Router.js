@@ -79,11 +79,7 @@ const Router = () => {
 
   return (
     <>
-      <StatusBar
-        backgroundColor="transparent"
-        translucent
-        barStyle={color.mode === 'light' ? 'dark-content' : 'light-content'}
-      />
+      <StatusBar backgroundColor="transparent" barStyle="dark-content" />
       <NavigationContainer
         linking={{
           prefixes: ['https://alopeyk.com'],
