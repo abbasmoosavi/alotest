@@ -1,0 +1,31 @@
+import { Strings } from '../../services/language';
+
+export const INITIAL_STATE = {
+  currentRegion: {
+    latitude: 32.344707,
+    longitude: 51.508196,
+    latitudeDelta: 0.007,
+    longitudeDelta: 0.007,
+  },
+  discount_minimum: 0,
+  discount_maximum: 100,
+  distance: 1,
+  discount: 1,
+  follower: 1,
+  radius: 20,
+  category_id: null,
+  requestInvitationCode: null,
+  requestCategoryId: { value: 0, label: Strings.services.location.category.title },
+  requestOwnerId: null,
+  requestAdminsId: null,
+  requestTitle: null,
+  requestDescription: null,
+  requestDiscountMin: 0,
+  requestDiscountMax: 100,
+  requestCover: null,
+  requestLink: null,
+  requestPhone: null,
+  requestAddress: null,
+  requestDays: null,
+  requesthours: null,
+};
