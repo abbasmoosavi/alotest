@@ -11,7 +11,7 @@ import ReactNativeRestart from 'react-native-restart';
 import { Helper } from '../utils';
 import { Strings } from '../services/language';
 import LanguageActions from '../redux/actions/LanguageActions';
-import Home from '../screens/Home';
+import BottomTabNavigator from './TabNavigator';
 
 const Router = () => {
   const dispatch = useDispatch();
@@ -97,7 +97,7 @@ const Router = () => {
           screenOptions={{ ...TransitionPresets.ScaleFromCenterAndroid }}
           headerMode="none"
           initialRouteName={initialRoute}>
-          <Stack.Screen name="home" component={Home} />
+          <Stack.Screen name="home" component={BottomTabNavigator} />
         </Stack.Navigator>
       </NavigationContainer>
     </>
