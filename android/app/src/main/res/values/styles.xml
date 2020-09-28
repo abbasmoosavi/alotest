@@ -1,9 +1,19 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="SplashDark" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/status_bar_color</item>
+        <item name="android:background">@color/primary_dark</item>
+    </style>
+
+    <style name="SplashLight" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/status_bar_color</item>
+        <item name="android:background">@color/primary_light</item>
     </style>
 
 </resources>

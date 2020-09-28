@@ -1,11 +1,13 @@
 import React from 'react';
 import { View, Text } from 'react-native';
+import { Col } from 'react-native-easy-grid';
+import { CategoriesList } from '../components/common';
 
 const ProductsTab = () => {
   return (
-    <View>
-      <Text>ProductsTab</Text>
-    </View>
+    <Col>
+      <CategoriesList />
+    </Col>
   );
 };
 

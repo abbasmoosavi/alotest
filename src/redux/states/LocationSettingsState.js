@@ -15,7 +15,7 @@ export const INITIAL_STATE = {
   radius: 20,
   category_id: null,
   requestInvitationCode: null,
-  requestCategoryId: { value: 0, label: Strings.services.location.category.title },
+  requestCategoryId: { value: 0, label: Strings.category.title },
   requestOwnerId: null,
   requestAdminsId: null,
   requestTitle: null,
