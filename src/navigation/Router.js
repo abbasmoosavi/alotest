@@ -12,6 +12,7 @@ import { Helper } from '../utils';
 import { Strings } from '../services/language';
 import LanguageActions from '../redux/actions/LanguageActions';
 import BottomTabNavigator from './TabNavigator';
+import { MapStackNavigator } from './StackNavigator';
 
 const Router = () => {
   const dispatch = useDispatch();
@@ -101,6 +102,7 @@ const Router = () => {
           headerMode="none"
           initialRouteName={initialRoute}>
           <Stack.Screen name="home" component={BottomTabNavigator} />
+          <Stack.Screen name="map" component={MapStackNavigator} />
         </Stack.Navigator>
       </NavigationContainer>
     </>

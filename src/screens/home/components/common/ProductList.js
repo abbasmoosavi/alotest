@@ -10,18 +10,17 @@ import { FontFamily, FontSize, Integer } from '../../../../styles';
 import { Helper } from '../../../../utils';
 import ProgressiveImage from './ProgressiveImage';
 
-const ProductList = ({ data }) => {
+const ProductList = ({ data, navigation }) => {
   const color = useSelector((state) => state.color);
   const language = useSelector((state) => state.language);
 
   const renderItem = ({ item }) => {
     return (
-      <TouchableOpacity
+      <Row
         style={{
           alignSelf: 'center',
           width: '92%',
           height: hp('25%'),
-          flexDirection: 'row',
           alignItems: 'center',
           padding: Integer.PADDING,
           backgroundColor: color.BACKGRAND_BOX,
@@ -72,6 +71,7 @@ const ProductList = ({ data }) => {
           </Grid>
           <Grid>
             <TouchableOpacity
+              onPress={() => navigation.navigate('map')}
               style={{
                 height: hp('5%'),
                 width: wp('20%'),
@@ -109,7 +109,7 @@ const ProductList = ({ data }) => {
             }}
           />
         </Col>
-      </TouchableOpacity>
+      </Row>
     );
   };
 
