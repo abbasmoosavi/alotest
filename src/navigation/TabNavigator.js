@@ -4,19 +4,13 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Strings } from '../services/language';
-import { Integer } from '../styles';
+import { FontFamily, Integer } from '../styles';
 import { OrdersStackNavigator, ProductsStackNavigator } from './StackNavigator';
 
 const Tab = createBottomTabNavigator();
 const BottomTabNavigator = () => {
   return (
-    <Tab.Navigator
-      tabBarOptions={{
-        style: { height: Integer.BOTTOM_HEIGHT, paddingVertical: hp('0.5%') },
-      }}
-      backBehavior="initialRoute"
-      animationEnabled
-      initialRouteName="Products">
+    <Tab.Navigator backBehavior="initialRoute" animationEnabled initialRouteName="Products">
       <Tab.Screen
         name="Products"
         options={{
@@ -26,6 +20,7 @@ const BottomTabNavigator = () => {
                 <Text
                   style={{
                     color,
+                    fontFamily: FontFamily.TITLE,
                   }}>
                   {Strings.bottomTab.products.title}
                 </Text>
@@ -54,6 +49,7 @@ const BottomTabNavigator = () => {
                 <Text
                   style={{
                     color,
+                    fontFamily: FontFamily.TITLE,
                   }}>
                   {Strings.bottomTab.orders.title}
                 </Text>
